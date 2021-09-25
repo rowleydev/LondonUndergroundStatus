@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus;
+package rwr.android.tubestatus;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -6,11 +6,11 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 
-import rwr.android.TFL.ITFLDataManager;
-import rwr.android.TubeStatus.AnimatedLine.IAnimatedLineGridLayout;
-import rwr.android.TubeStatus.ColourSchemeManager.IColourSchemeClient;
-import rwr.android.TubeStatus.ColourSchemeManager.IColourSchemeManager;
-import rwr.android.TubeStatus.Image.IBitmapCache;
+import rwr.android.tfl.ITFLDataManager;
+import rwr.android.tubestatus.animatedline.IAnimatedLineGridLayout;
+import rwr.android.tubestatus.colourschememanager.IColourSchemeClient;
+import rwr.android.tubestatus.colourschememanager.IColourSchemeManager;
+import rwr.android.tubestatus.image.IBitmapCache;
 
 public class MainView implements IColourSchemeClient
 {
@@ -93,17 +93,17 @@ public class MainView implements IColourSchemeClient
 
     private void createColourSchemeButton(Point screenSize)
     {
-        int colourChangeIconSize = (int)(gridLayout.getRowHeight() * 0.7);
-        int colourChangeMargin = (int)(gridLayout.getRowHeight() * 0.1);
+        int colourChangeIconSize = (int) (gridLayout.getRowHeight() * 0.7);
+        int colourChangeMargin = (int) (gridLayout.getRowHeight() * 0.1);
 
         changeColourIconRect = new Rect(screenSize.x - colourChangeMargin - colourChangeIconSize,
-                                        (gridLayout.getRowHeight() - colourChangeIconSize)/2,
-                                        screenSize.x - colourChangeMargin,
-                                        gridLayout.getRowHeight() - (gridLayout.getRowHeight() - colourChangeIconSize)/2);
+                (gridLayout.getRowHeight() - colourChangeIconSize) / 2,
+                screenSize.x - colourChangeMargin,
+                gridLayout.getRowHeight() - (gridLayout.getRowHeight() - colourChangeIconSize) / 2);
 
-        changeColourButtonRect = new Rect(screenSize.x - colourChangeMargin - (int)(colourChangeIconSize*2.0),
-                                            0,
-                                            screenSize.x,
-                                            gridLayout.getRowHeight());
+        changeColourButtonRect = new Rect(screenSize.x - colourChangeMargin - (int) (colourChangeIconSize * 2.0),
+                0,
+                screenSize.x,
+                gridLayout.getRowHeight());
     }
 }

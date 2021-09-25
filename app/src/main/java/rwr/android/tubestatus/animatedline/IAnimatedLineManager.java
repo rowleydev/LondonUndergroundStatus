@@ -1,9 +1,9 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 import android.graphics.Canvas;
 
-import rwr.android.TFL.ITFLDataClient;
-import rwr.android.TubeStatus.ColourSchemeManager.IColourSchemeClient;
+import rwr.android.tfl.ITFLDataClient;
+import rwr.android.tubestatus.colourschememanager.IColourSchemeClient;
 
 public interface IAnimatedLineManager extends ITFLDataClient, IColourSchemeClient
 {

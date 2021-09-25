@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 import android.graphics.Bitmap;
 
@@ -16,8 +16,8 @@ public class TrainBitmapCollection
         this.centre = centre;
         this.back = back;
 
-        this.width = (int)width;
-        this.height = (int)(width * heightRatio);
+        this.width = (int) width;
+        this.height = (int) (width * heightRatio);
     }
 
     public Bitmap getFront()

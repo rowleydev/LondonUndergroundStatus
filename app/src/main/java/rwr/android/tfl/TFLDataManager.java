@@ -1,4 +1,4 @@
-package rwr.android.TFL;
+package rwr.android.tfl;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -30,9 +30,9 @@ public class TFLDataManager implements ITFLDataManager
         lines.add(new Line("Central Line", "central", TrainType.UNDERGROUND, 235, 5, 5));
         lines.add(new Line("Circle Line", "circle", TrainType.UNDERGROUND, 255, 230, 0));
         lines.add(new Line("District Line", "district", TrainType.UNDERGROUND, 0, 180, 20));
-        lines.add(new Line("DLR", "dlr", TrainType.DLR,0, 175, 175));
+        lines.add(new Line("DLR", "dlr", TrainType.DLR, 0, 175, 175));
         lines.add(new Line("Hammersmith & City Line", "hammersmith-city", TrainType.UNDERGROUND, 230, 130, 230));
-        lines.add(new Line("Jubilee Line","jubilee", TrainType.UNDERGROUND, 150, 150, 150));
+        lines.add(new Line("Jubilee Line", "jubilee", TrainType.UNDERGROUND, 150, 150, 150));
         lines.add(new Line("Metropolitan Line", "metropolitan", TrainType.UNDERGROUND, 130, 20, 75));
         lines.add(new Line("Northern Line", "northern", TrainType.UNDERGROUND, 0, 0, 0));
         lines.add(new Line("Piccadilly Line", "piccadilly", TrainType.UNDERGROUND, 0, 0, 200));
@@ -94,7 +94,7 @@ public class TFLDataManager implements ITFLDataManager
                             Log.w("TFL", "Updating local data");
 
                             // Update local data
-                            for(LineStatusUpdate lineStatusUpdate : lineStatusUpdates)
+                            for (LineStatusUpdate lineStatusUpdate : lineStatusUpdates)
                             {
                                 // Do not fully trust the data provider, perform a lookup on the identifier field and then validate data
                                 Line currentLine = getLine(lineStatusUpdate.getIdentifier().toLowerCase());
@@ -133,7 +133,7 @@ public class TFLDataManager implements ITFLDataManager
 
     private Line getLine(String lineName)
     {
-        for(Line line : lines)
+        for (Line line : lines)
         {
             if (line.getTflDataIdentifier().equals(lineName))
             {

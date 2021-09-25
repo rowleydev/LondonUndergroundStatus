@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -8,11 +8,11 @@ import android.graphics.Rect;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import rwr.android.TFL.ITFLDataManager;
-import rwr.android.TFL.Line;
-import rwr.android.TubeStatus.StatusUpdater.IStatusUpdater;
-import rwr.android.TubeStatus.Image.IBitmapCache;
-import rwr.android.TubeStatus.Image.PositionedBitmap;
+import rwr.android.tfl.ITFLDataManager;
+import rwr.android.tfl.Line;
+import rwr.android.tubestatus.statusupdater.IStatusUpdater;
+import rwr.android.tubestatus.image.IBitmapCache;
+import rwr.android.tubestatus.image.PositionedBitmap;
 
 public class AnimatedLineManager implements IAnimatedLineManager
 {
@@ -44,7 +44,7 @@ public class AnimatedLineManager implements IAnimatedLineManager
         this.statusUpdater = statusUpdater;
 
         int lastRowEnd = (tflDataManager.getData().size()) * gridLayout.getRowHeight() + gridLayout.getGridOffset();
-        gridBottomPaddingRect = new Rect(0, lastRowEnd, screenSize.x, lastRowEnd + gridLayout.getRowHeight()*2);
+        gridBottomPaddingRect = new Rect(0, lastRowEnd, screenSize.x, lastRowEnd + gridLayout.getRowHeight() * 2);
 
         populateInitialLineData(tflDataManager.getData());
 
@@ -222,7 +222,7 @@ public class AnimatedLineManager implements IAnimatedLineManager
 
     private void repopulateLineData(ArrayList<Line> lines)
     {
-        for(int i = 0; i < animatedLines.size(); i++)
+        for (int i = 0; i < animatedLines.size(); i++)
         {
             Line line = lines.get(i);
             animatedLines.get(i).setStatus(line.getStatusSeverity(), line.getReason());

@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 import android.graphics.Point;
 
@@ -10,8 +10,8 @@ public class AnimatedLineGridLayout implements IAnimatedLineGridLayout
 
     public AnimatedLineGridLayout(Point screenSize, int lineCount, float screenFraction)
     {
-        animationFinishPosition = (float)(screenSize.x / 40);
-        rowHeight = (int)((screenSize.y * screenFraction) / (lineCount + 1));
+        animationFinishPosition = (float) (screenSize.x / 40);
+        rowHeight = (int) ((screenSize.y * screenFraction) / (lineCount + 1));
         gridOffset = rowHeight;
     }
 

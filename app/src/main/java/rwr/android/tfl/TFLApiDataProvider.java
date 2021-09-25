@@ -1,4 +1,4 @@
-package rwr.android.TFL;
+package rwr.android.tfl;
 
 import android.util.JsonReader;
 import android.util.Log;
@@ -6,7 +6,7 @@ import android.util.Log;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import rwr.android.TFL.DataCleaner.IDataCleaner;
+import rwr.android.tfl.datacleaner.IDataCleaner;
 
 public class TFLApiDataProvider implements IDataProvider
 {
@@ -72,7 +72,7 @@ public class TFLApiDataProvider implements IDataProvider
                     {
                         String statusType = jsonReader.nextName();
 
-                        switch(statusType)
+                        switch (statusType)
                         {
                             case "statusSeverity":
 

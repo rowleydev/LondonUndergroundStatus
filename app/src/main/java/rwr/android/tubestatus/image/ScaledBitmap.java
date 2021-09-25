@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.Image;
+package rwr.android.tubestatus.image;
 
 import android.graphics.Bitmap;
 
@@ -18,8 +18,8 @@ public class ScaledBitmap
     public ScaledBitmap(Bitmap bitmap, float height)
     {
         this.bitmap = bitmap;
-        this.height = (int)height;
-        this.width = (int)(height * bitmap.getWidth() / bitmap.getHeight());
+        this.height = (int) height;
+        this.width = (int) (height * bitmap.getWidth() / bitmap.getHeight());
     }
 
     public Bitmap getBitmap()

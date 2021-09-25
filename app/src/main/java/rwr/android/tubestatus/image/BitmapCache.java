@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.Image;
+package rwr.android.tubestatus.image;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,10 +6,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.graphics.Point;
 
-import rwr.android.TFL.R;
-import rwr.android.TubeStatus.AnimatedLine.TrainBitmapCollection;
-import rwr.android.TFL.TrainType;
-import rwr.android.Util.Utilities;
+import rwr.android.tfl.R;
+import rwr.android.tubestatus.animatedline.TrainBitmapCollection;
+import rwr.android.tfl.TrainType;
+import rwr.android.util.Utilities;
 
 public class BitmapCache implements IBitmapCache
 {
@@ -31,31 +31,31 @@ public class BitmapCache implements IBitmapCache
     public BitmapCache(Context context, int rowHeight)
     {
         Point screenSize = Utilities.getScreenSize(context);
-        int trainWidth = (int)(screenSize.x / 10.5f);
+        int trainWidth = (int) (screenSize.x / 10.5f);
 
         undergroundTrain = new TrainBitmapCollection(
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.undergroundfront),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.undergroundcentre),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.undergroundback),
-                trainWidth, 26/140f );
+                trainWidth, 26 / 140f);
 
         overgroundTrain = new TrainBitmapCollection(
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.overgroundfront),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.overgroundcentre),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.overgroundback),
-                trainWidth, 26/140f );
+                trainWidth, 26 / 140f);
 
         dlrTrain = new TrainBitmapCollection(
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.dlrfront),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.dlrcentre),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.dlrback),
-                trainWidth, 26/107f );
+                trainWidth, 26 / 107f);
 
         tflRailTrain = new TrainBitmapCollection(
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailfront),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailcentre),
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailback),
-                trainWidth, 26/140f );
+                trainWidth, 26 / 140f);
 
         bigBenBitmap = new ScaledBitmap(
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.bigben),

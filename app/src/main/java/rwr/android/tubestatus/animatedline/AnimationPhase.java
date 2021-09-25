@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 public enum AnimationPhase
 {

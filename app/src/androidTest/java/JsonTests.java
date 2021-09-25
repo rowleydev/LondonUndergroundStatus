@@ -8,11 +8,11 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 import Mocks.FileJsonEndpoint;
-import rwr.android.TFL.DataCleaner.DataCleaner;
-import rwr.android.TFL.DataCleaner.IDataCleaner;
-import rwr.android.TFL.IJsonEndpoint;
-import rwr.android.TFL.LineStatusUpdate;
-import rwr.android.TFL.TFLApiDataProvider;
+import rwr.android.tfl.datacleaner.DataCleaner;
+import rwr.android.tfl.datacleaner.IDataCleaner;
+import rwr.android.tfl.IJsonEndpoint;
+import rwr.android.tfl.LineStatusUpdate;
+import rwr.android.tfl.TFLApiDataProvider;
 
 import static org.junit.Assert.*;
 

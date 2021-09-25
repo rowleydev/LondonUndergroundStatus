@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import rwr.android.TFL.DataCleaner.DataCleaner;
-import rwr.android.TFL.DataCleaner.IDataCleaner;
+import rwr.android.tfl.datacleaner.DataCleaner;
+import rwr.android.tfl.datacleaner.IDataCleaner;
 
 import static org.junit.Assert.assertEquals;
 

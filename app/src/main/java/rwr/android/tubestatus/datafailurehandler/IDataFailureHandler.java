@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.DataFailureHandler;
+package rwr.android.tubestatus.datafailurehandler;
 
 public interface IDataFailureHandler
 {

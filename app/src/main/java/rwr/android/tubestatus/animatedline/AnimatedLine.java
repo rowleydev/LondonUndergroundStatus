@@ -1,13 +1,13 @@
-package rwr.android.TubeStatus.AnimatedLine;
+package rwr.android.tubestatus.animatedline;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.Rect;
 
-import rwr.android.TFL.Line;
-import rwr.android.TubeStatus.Image.IBitmapCache;
-import rwr.android.TubeStatus.Image.PositionedBitmap;
+import rwr.android.tfl.Line;
+import rwr.android.tubestatus.image.IBitmapCache;
+import rwr.android.tubestatus.image.PositionedBitmap;
 
 class AnimatedLine
 {
@@ -65,10 +65,10 @@ class AnimatedLine
 
         if (featurePositionedBitmap != null)
         {
-            featureRect = new Rect( featurePositionedBitmap.getPosition() * screenSizeX/10,
-                                    backgroundRect.bottom - featurePositionedBitmap.getHeight(),
-                                    featurePositionedBitmap.getPosition() * screenSizeX/10 + featurePositionedBitmap.getWidth(),
-                                    backgroundRect.bottom );
+            featureRect = new Rect(featurePositionedBitmap.getPosition() * screenSizeX / 10,
+                    backgroundRect.bottom - featurePositionedBitmap.getHeight(),
+                    featurePositionedBitmap.getPosition() * screenSizeX / 10 + featurePositionedBitmap.getWidth(),
+                    backgroundRect.bottom);
 
             featureBitmap = featurePositionedBitmap.getBitmap();
         }
@@ -98,7 +98,7 @@ class AnimatedLine
 
     public void setInAnimation()
     {
-         animationPhase = AnimationPhase.IN;
+        animationPhase = AnimationPhase.IN;
     }
 
     public void setOutAnimationIfPaused()
@@ -139,7 +139,7 @@ class AnimatedLine
             animationSpeed += elapsed * animationOutAcceleration;
             animationX += elapsed * animationSpeed * screenSizeX;
 
-            if (animationX < (0-screenSizeX))
+            if (animationX < (-screenSizeX))
             {
                 animationX = screenSizeX;
                 animationSpeed = animationInInitialSpeed;
@@ -185,9 +185,9 @@ class AnimatedLine
 
     private void setCarriageRect(int carriagePosition)
     {
-        carriageImageRect.set((int)(bitmapWidth * carriagePosition + animationX),
-                             backgroundRect.bottom - bitmapHeight,
-                             (int)(bitmapWidth* (carriagePosition + 1) + animationX),
-                              backgroundRect.bottom);
+        carriageImageRect.set((int) (bitmapWidth * carriagePosition + animationX),
+                backgroundRect.bottom - bitmapHeight,
+                (int) (bitmapWidth * (carriagePosition + 1) + animationX),
+                backgroundRect.bottom);
     }
 }

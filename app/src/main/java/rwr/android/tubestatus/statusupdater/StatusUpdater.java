@@ -1,11 +1,11 @@
-package rwr.android.TubeStatus.StatusUpdater;
+package rwr.android.tubestatus.statusupdater;
 
 import android.app.Activity;
 import android.widget.TextView;
 
-import rwr.android.TFL.R;
-import rwr.android.TubeStatus.ColourSchemeManager.IColourSchemeClient;
-import rwr.android.TubeStatus.ColourSchemeManager.IColourSchemeManager;
+import rwr.android.tfl.R;
+import rwr.android.tubestatus.colourschememanager.IColourSchemeClient;
+import rwr.android.tubestatus.colourschememanager.IColourSchemeManager;
 
 public class StatusUpdater implements IStatusUpdater, IColourSchemeClient
 {
@@ -28,7 +28,7 @@ public class StatusUpdater implements IStatusUpdater, IColourSchemeClient
     @Override
     public void setSelectLineCaption()
     {
-        if(activity != null && statusTextView != null)
+        if (activity != null && statusTextView != null)
         {
             activity.runOnUiThread(new Runnable()
             {
@@ -44,9 +44,9 @@ public class StatusUpdater implements IStatusUpdater, IColourSchemeClient
     @Override
     public void setStatus(String caption)
     {
-        if(activity != null && statusTextView != null)
+        if (activity != null && statusTextView != null)
         {
-             statusTextView.setText(caption);
+            statusTextView.setText(caption);
         }
     }
 }

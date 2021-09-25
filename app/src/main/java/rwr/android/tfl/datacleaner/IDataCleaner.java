@@ -1,4 +1,4 @@
-package rwr.android.TFL.DataCleaner;
+package rwr.android.tfl.datacleaner;
 
 public interface IDataCleaner
 {

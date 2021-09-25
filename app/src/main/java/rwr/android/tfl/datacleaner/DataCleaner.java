@@ -1,12 +1,13 @@
-package rwr.android.TFL.DataCleaner;
+package rwr.android.tfl.datacleaner;
 
 import android.content.Context;
 
-import rwr.android.TFL.R;
+import rwr.android.tfl.R;
 
 public class DataCleaner implements IDataCleaner
 {
     private final Context context;
+
     public DataCleaner(Context context)
     {
         this.context = context;
@@ -15,7 +16,7 @@ public class DataCleaner implements IDataCleaner
     @Override
     public int transformStatusSeverity(int statusSeverity)
     {
-        switch(statusSeverity)
+        switch (statusSeverity)
         {
             case 11:                    // Part closed
             case 12:                    // Exit only

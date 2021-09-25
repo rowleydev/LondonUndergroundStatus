@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.ColourSchemeManager;
+package rwr.android.tubestatus.colourschememanager;
 
 public class ColourScheme
 {

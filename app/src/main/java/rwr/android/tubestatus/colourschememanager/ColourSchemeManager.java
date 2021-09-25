@@ -1,7 +1,8 @@
-package rwr.android.TubeStatus.ColourSchemeManager;
+package rwr.android.tubestatus.colourschememanager;
 
 import android.content.SharedPreferences;
 import android.graphics.Color;
+
 import java.util.ArrayList;
 import java.util.List;
 

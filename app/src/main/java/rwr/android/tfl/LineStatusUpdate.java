@@ -1,4 +1,4 @@
-package rwr.android.TFL;
+package rwr.android.tfl;
 
 public class LineStatusUpdate
 {

@@ -1,4 +1,4 @@
-package rwr.android.TFL;
+package rwr.android.tfl;
 
 import android.util.JsonReader;
 import android.util.Log;
@@ -6,10 +6,11 @@ import android.util.Log;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import rwr.android.TubeStatus.DataFailureHandler.IDataFailureHandler;
+import rwr.android.tubestatus.datafailurehandler.IDataFailureHandler;
 
 public class TFLApiJsonEndpoint implements IJsonEndpoint
 {
@@ -35,7 +36,7 @@ public class TFLApiJsonEndpoint implements IJsonEndpoint
             if (httpsConnection.getResponseCode() == 200)
             {
                 InputStream serverResponse = httpsConnection.getInputStream();
-                InputStreamReader responseReader = new InputStreamReader(serverResponse, "UTF-8");
+                InputStreamReader responseReader = new InputStreamReader(serverResponse, StandardCharsets.UTF_8);
 
                 return new JsonReader(responseReader);
             }
@@ -48,7 +49,7 @@ public class TFLApiJsonEndpoint implements IJsonEndpoint
         {
             Log.w("TFL", "Remote connection error: " + ex.getMessage());
 
-            if(dataFailureHandler != null)
+            if (dataFailureHandler != null)
             {
                 dataFailureHandler.dataDownloadFailure();
             }

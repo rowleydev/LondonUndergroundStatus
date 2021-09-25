@@ -1,4 +1,4 @@
-package rwr.android.Util;
+package rwr.android.util;
 
 import android.content.Context;
 import android.graphics.Point;

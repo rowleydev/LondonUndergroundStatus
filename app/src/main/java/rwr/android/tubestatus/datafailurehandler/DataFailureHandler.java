@@ -1,9 +1,9 @@
-package rwr.android.TubeStatus.DataFailureHandler;
+package rwr.android.tubestatus.datafailurehandler;
 
 import android.app.Activity;
 import android.widget.TextView;
 
-import rwr.android.TFL.R;
+import rwr.android.tfl.R;
 
 public class DataFailureHandler implements IDataFailureHandler
 {
@@ -19,7 +19,7 @@ public class DataFailureHandler implements IDataFailureHandler
     @Override
     public void dataDownloadFailure()
     {
-        if(activity != null && statusTextView != null)
+        if (activity != null && statusTextView != null)
         {
             activity.runOnUiThread(new Runnable()
             {

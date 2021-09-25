@@ -1,4 +1,4 @@
-package rwr.android.TubeStatus.Image;
+package rwr.android.tubestatus.image;
 
 public class PositionedBitmap extends ScaledBitmap
 {
