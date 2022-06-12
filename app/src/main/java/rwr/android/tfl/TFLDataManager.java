@@ -39,7 +39,7 @@ public class TFLDataManager implements ITFLDataManager
         lines.add(new Line("Victoria Line", "victoria", TrainType.UNDERGROUND, 50, 150, 255));
         lines.add(new Line("Waterloo & City Line", "waterloo-city", TrainType.UNDERGROUND, 120, 210, 190));
         lines.add(new Line("London Overground", "london-overground", TrainType.OVERGROUND, 230, 100, 15));
-        lines.add(new Line("TfL Rail", "tfl-rail", TrainType.TFL_RAIL, 0, 25, 170));
+        lines.add(new Line("Elizabeth Line", "elizabeth", TrainType.ELIZABETH_LINE, 105, 80, 161));
 
         this.dataGetter = dataProvider;
 

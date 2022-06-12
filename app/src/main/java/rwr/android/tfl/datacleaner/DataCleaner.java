@@ -49,6 +49,10 @@ public class DataCleaner implements IDataCleaner
     @Override
     public String cleanReason(String reason, int statusSeverity)
     {
+        if (reason == null) {
+            reason = "";
+        }
+
         if (reason.isEmpty())
         {
             if (statusSeverity == 10)

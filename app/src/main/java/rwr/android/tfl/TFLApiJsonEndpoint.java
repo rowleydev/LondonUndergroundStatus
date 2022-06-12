@@ -14,7 +14,7 @@ import rwr.android.tubestatus.datafailurehandler.IDataFailureHandler;
 
 public class TFLApiJsonEndpoint implements IJsonEndpoint
 {
-    private final static String tflURL = "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status";
+    private final static String tflURL = "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,elizabeth-line/status";
 
     private final IDataFailureHandler dataFailureHandler;
 

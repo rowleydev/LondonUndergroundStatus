@@ -16,7 +16,7 @@ public class BitmapCache implements IBitmapCache
     private final TrainBitmapCollection undergroundTrain;
     private final TrainBitmapCollection overgroundTrain;
     private final TrainBitmapCollection dlrTrain;
-    private final TrainBitmapCollection tflRailTrain;
+    private final TrainBitmapCollection elizabethLineTrain;
 
     private final ScaledBitmap bigBenBitmap;
     private final ScaledBitmap domeBitmap;
@@ -51,10 +51,10 @@ public class BitmapCache implements IBitmapCache
                 BitmapFactory.decodeResource(context.getResources(), R.drawable.dlrback),
                 trainWidth, 26 / 107f);
 
-        tflRailTrain = new TrainBitmapCollection(
-                BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailfront),
-                BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailcentre),
-                BitmapFactory.decodeResource(context.getResources(), R.drawable.tflrailback),
+        elizabethLineTrain = new TrainBitmapCollection(
+                BitmapFactory.decodeResource(context.getResources(), R.drawable.elizabethlinefront),
+                BitmapFactory.decodeResource(context.getResources(), R.drawable.elizabethlinecentre),
+                BitmapFactory.decodeResource(context.getResources(), R.drawable.elizabethlineback),
                 trainWidth, 26 / 140f);
 
         bigBenBitmap = new ScaledBitmap(
@@ -95,8 +95,8 @@ public class BitmapCache implements IBitmapCache
                 return dlrTrain.getHeight();
             case OVERGROUND:
                 return overgroundTrain.getHeight();
-            case TFL_RAIL:
-                return tflRailTrain.getHeight();
+            case ELIZABETH_LINE:
+                return elizabethLineTrain.getHeight();
             default:
                 return 0;
         }
@@ -113,8 +113,8 @@ public class BitmapCache implements IBitmapCache
                 return dlrTrain.getWidth();
             case OVERGROUND:
                 return overgroundTrain.getWidth();
-            case TFL_RAIL:
-                return tflRailTrain.getWidth();
+            case ELIZABETH_LINE:
+                return elizabethLineTrain.getWidth();
             default:
                 return 0;
         }
@@ -137,8 +137,8 @@ public class BitmapCache implements IBitmapCache
                 return dlrTrain.getFront();
             case OVERGROUND:
                 return overgroundTrain.getFront();
-            case TFL_RAIL:
-                return tflRailTrain.getFront();
+            case ELIZABETH_LINE:
+                return elizabethLineTrain.getFront();
             default:
                 return null;
         }
@@ -155,8 +155,8 @@ public class BitmapCache implements IBitmapCache
                 return dlrTrain.getBack();
             case OVERGROUND:
                 return overgroundTrain.getBack();
-            case TFL_RAIL:
-                return tflRailTrain.getBack();
+            case ELIZABETH_LINE:
+                return elizabethLineTrain.getBack();
             default:
                 return null;
         }
@@ -173,8 +173,8 @@ public class BitmapCache implements IBitmapCache
                 return dlrTrain.getCentre();
             case OVERGROUND:
                 return overgroundTrain.getCentre();
-            case TFL_RAIL:
-                return tflRailTrain.getCentre();
+            case ELIZABETH_LINE:
+                return elizabethLineTrain.getCentre();
             default:
                 return null;
         }

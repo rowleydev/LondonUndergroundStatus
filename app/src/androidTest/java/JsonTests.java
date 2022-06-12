@@ -51,7 +51,7 @@ public class JsonTests
         assertEquals(statusUpdates.get(8).getIdentifier(), "metropolitan");
         assertEquals(statusUpdates.get(9).getIdentifier(), "northern");
         assertEquals(statusUpdates.get(10).getIdentifier(), "piccadilly");
-        assertEquals(statusUpdates.get(11).getIdentifier(), "tfl-rail");
+        assertEquals(statusUpdates.get(11).getIdentifier(), "elizabeth");
         assertEquals(statusUpdates.get(12).getIdentifier(), "victoria");
         assertEquals(statusUpdates.get(13).getIdentifier(), "waterloo-city");
     }
@@ -70,6 +70,6 @@ public class JsonTests
     {
         assertEquals(statusUpdates.get(7).getReason(), "LONDON OVERGROUND: Sample reason");
         assertEquals(statusUpdates.get(9).getReason(), "NORTHERN LINE: Sample reason");
-        assertEquals(statusUpdates.get(11).getReason(), "TFL RAIL: Sample reason");
+        assertEquals(statusUpdates.get(11).getReason(), "ELIZABETH LINE: Sample reason");
     }
 }

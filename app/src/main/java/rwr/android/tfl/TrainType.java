@@ -4,6 +4,6 @@ public enum TrainType
 {
     UNDERGROUND,
     OVERGROUND,
-    TFL_RAIL,
+    ELIZABETH_LINE,
     DLR
 }

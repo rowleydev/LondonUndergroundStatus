@@ -393,9 +393,9 @@
   },
   {
     "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
-    "id": "tfl-rail",
-    "name": "TfL Rail",
-    "modeName": "tflrail",
+    "id": "elizabeth",
+    "name": "Elizabeth Line",
+    "modeName": "elizabeth-line",
     "disruptions": [],
     "created": "2018-03-14T17:44:30.943Z",
     "modified": "2018-03-14T17:44:30.943Z",
@@ -403,10 +403,10 @@
       {
         "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
         "id": 0,
-        "lineId": "tfl-rail",
+        "lineId": "elizabeth",
         "statusSeverity": 4,
         "statusSeverityDescription": "Planned Closure",
-        "reason": "TFL RAIL: Sample reason",
+        "reason": "ELIZABETH LINE: Sample reason",
         "created": "0001-01-01T00:00:00",
         "validityPeriods": [
           {
@@ -420,7 +420,7 @@
           "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
           "category": "PlannedWork",
           "categoryDescription": "PlannedWork",
-          "description": "TFL RAIL: Sample reason",
+          "description": "ELIZABETH LINE: Sample reason",
           "created": "2017-11-24T13:16:00Z",
           "affectedRoutes": [],
           "affectedStops": [],
@@ -433,7 +433,7 @@
       {
         "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
         "name": "Regular",
-        "uri": "/Line/Route?ids=TfL Rail&serviceTypes=Regular"
+        "uri": "/Line/Route?ids=Elizabeth line&serviceTypes=Regular"
       }
     ],
     "crowding": {
